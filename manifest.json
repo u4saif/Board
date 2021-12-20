@@ -1,0 +1,17 @@
+{
+    "name": "white board",
+    "version": "0.12.21",
+    "description": "Smart board that can be use for online classes",
+    "action": {
+      "default_icon": "assets/images/icon.png",
+      "default_popup": "index.html"
+    },
+    "icons": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon128.png",
+      "128": "assets/images/icon.png"
+    },
+    "background": {},
+    "permissions": ["storage"],
+    "manifest_version": 3
+  }
