@@ -24,8 +24,6 @@ function finishPosition() {
 }
 function draw(e) {
   if (!drawing) return;
-
-  ctx.lineWidth = 5;
   ctx.lineCap = "round";
   ctx.lineTo(e.clientX, e.clientY);
   ctx.stroke();
@@ -36,6 +34,10 @@ function changePenColor(color = black) {
   ctx.strokeStyle = color;
 }
 
+function changePenSize(size= 4){
+    ctx.lineWidth = size;
+}
+
 canvas.addEventListener("mousedown", startPosition);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", finishPosition);
@@ -44,6 +46,7 @@ var navManu = document.createElement("div");
 navManu.setAttribute("id", "navManu");
 
 document.body.appendChild(navManu);
+
 var colorContainer = document.createElement("div");
 colorContainer.setAttribute("id", "colorContainer");
 navManu.appendChild(colorContainer);
@@ -83,8 +86,41 @@ document
 
 document
   .getElementById("colorItem4")
-  ?.addEventListener("click", changePenColor.bind(event, "black"));
+  ?.addEventListener("click", changePenColor.bind(event, "red"));
 
   document
   .getElementById("colorItem5")
   ?.addEventListener("input", changePenColor.bind(event));
+
+var penContainer = document.createElement("div");
+penContainer.setAttribute("id", "penContainer");
+navManu.appendChild(penContainer);
+
+  colorItemsArr.forEach((i)=>{
+    var itemName = "penItem" + i;
+    var itemName = document.createElement("div");
+    itemName.setAttribute("id", "penItem" + i);
+    let penContainer = document.getElementById("penContainer");
+    penContainer.appendChild(itemName);
+  });
+
+  document
+  .getElementById("penItem0")
+  ?.addEventListener("click", changePenSize.bind(event, 3));
+
+  
+  document
+  .getElementById("penItem1")
+  ?.addEventListener("click", changePenSize.bind(event, 6));
+
+
+  
+  document
+  .getElementById("penItem2")
+  ?.addEventListener("click", changePenSize.bind(event, 8));
+
+
+  
+  document
+  .getElementById("penItem3")
+  ?.addEventListener("click", changePenSize.bind(event, 14));
