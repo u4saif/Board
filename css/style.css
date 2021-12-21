@@ -3,27 +3,21 @@
     margin: 0;
     padding: 0;
 }
-
-ul{
-    display: flex;
-    justify-content: start;
-    align-items: stretch;
-    flex-direction: column;
+#canvas{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-color: rgb(29, 27, 27);
 }
-li{
-    z-index: 20000;
-    list-style-type: none;
-    padding: 1em;
-    cursor: pointer;
-}
-
-input[type="color"] {
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-}
-
-input[type="range"] {
+#navManu{
+    position: fixed;
     width: 50px;
-    transform: rotate(270deg);
+    height: 300px;
+    top: 5em;
+    right: 0px;
+    z-index: 20001;
+    background-color: red;
+    border-bottom-left-radius: 3em;
+    border-top-left-radius: 3em;
 }
