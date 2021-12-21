@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-direction: column;
+}
+li{
+    z-index: 20000;
+    list-style-type: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+input[type="color"] {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="range"] {
+    width: 50px;
+    transform: rotate(270deg);
+}
