@@ -1,23 +1,83 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-#canvas{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1000;
-    background-color: rgb(29, 27, 27);
+#canvas {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 20000;
+  background-color: rgb(29, 27, 27);
 }
-#navManu{
-    position: fixed;
-    width: 50px;
-    height: 300px;
-    top: 5em;
+#navManu {
+  position: fixed;
+  width: 5.4em;
+  height: 300px;
+  top: 5em;
+  /* right: 0px; */
+  right: -77px;
+  z-index: 20001;
+  background: linear-gradient(
+    327deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  border-bottom-left-radius: 2.2em;
+  border-top-left-radius: 2.2em;
+}
+
+div#colorContainer {
+  display: grid;
+  grid: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  height: 40px;
+}
+#navManu:hover{
     right: 0px;
-    z-index: 20001;
-    background-color: red;
-    border-bottom-left-radius: 3em;
-    border-top-left-radius: 3em;
+    transition: 90ms ease-in;
+}
+div#colorItem0,
+div#colorItem1,
+div#colorItem2,
+div#colorItem3,
+div#colorItem4,
+input#colorItem5 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+div#colorItem0 {
+  background-color: yellow;
+  border: 2px solid rgb(29, 27, 27);
+}
+
+div#colorItem1 {
+  background-color: rgb(6, 134, 253);
+  border: 2px solid rgb(29, 27, 27);
+}
+
+div#colorItem2 {
+  background-color: rgb(35, 253, 6);
+  border: 2px solid rgb(29, 27, 27);
+}
+
+div#colorItem3 {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(29, 27, 27);
+}
+
+div#colorItem4 {
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(252, 252, 252);
+}
+
+input#colorItem5 {
+  border: none;
+  overflow: hidden;
+  border-radius: none;
 }
