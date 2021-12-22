@@ -7,17 +7,17 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 20000;
+  z-index: 9999999;
   background-color: rgb(29, 27, 27);
 }
 #navManu {
   position: fixed;
-  width: 5.4em;
+  width: 7em;
   height: 300px;
   top: 5em;
-  right: 0px;
+  right: -4px;
   /* right: -77px; */
-  z-index: 20001;
+  z-index: 99999990;
   background: #c9d6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -31,14 +31,14 @@
 
 div#colorContainer {
   display: grid;
-  grid: 1fr 1fr;
+  /* grid: 1fr 1fr; */
   grid-template-columns: 1fr 1fr;
   height: 40px;
 }
-#navManu:hover {
+/* #navManu:hover {
   right: 0px;
   transition: 90ms ease-in;
-}
+} */
 div#colorItem0,
 div#colorItem1,
 div#colorItem2,
@@ -84,12 +84,10 @@ input#colorItem5 {
 }
 
 div#penContainer {
-  /* display: grid;
-  grid: 1fr 1fr;
-  grid-template-columns: 1fr 1fr; */
   height: 40px;
   margin-top: 100px;
 }
+
 div#penItem0,
 div#penItem1,
 div#penItem2,
@@ -123,13 +121,52 @@ div#colorItem0:hover,
 div#colorItem1:hover,
 div#colorItem2:hover,
 div#colorItem3:hover,
-div#colorItem4:hover{
+div#colorItem4:hover {
   border: 1px solid red;
 }
 
 div#penItem0:hover,
 div#penItem1:hover,
 div#penItem2:hover,
-div#penItem3:hover{
+div#penItem3:hover {
   border: 1px solid red;
+}
+
+div#bgContainer {
+  display: grid;
+  /* grid: 1fr 1fr; */
+  grid-template-columns: 1fr 1fr;
+  height: 40px;
+  width: 76px;
+  margin-top: 15px;
+  margin-left: 16px;
+}
+
+div#bgItem0,
+div#bgItem1,
+div#bgItem2,
+div#bgItem3
+{
+  width: 25px; 
+  height: 25px;
+  margin-top: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div#bgItem0{
+  background-color: rgb(29, 27, 27);
+}
+
+div#bgItem1{
+  background-color: white;
+}
+
+div#bgItem2{
+  background-color: rgba(6, 91, 145, 0.76);
+}
+
+div#bgItem3{
+  background-color: rgba(6, 92, 145, 0);
+  border: 2px dashed black;
 }

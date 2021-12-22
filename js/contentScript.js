@@ -29,13 +29,18 @@ function draw(e) {
   ctx.stroke();
 }
 
-function changePenColor(color = black) {
- if(event.target.value) color= event.target.value;
+function changePenColor(color = "black") {
+  if (event.target.value) color = event.target.value;
   ctx.strokeStyle = color;
 }
 
-function changePenSize(size= 4){
-    ctx.lineWidth = size;
+function changePenSize(size = 4) {
+  ctx.lineWidth = size;
+}
+
+function changeBoardBg ( color = "black"){
+    if(color=="none") canvas.style.background=color;
+    canvas.style.backgroundColor=color;
 }
 
 canvas.addEventListener("mousedown", startPosition);
@@ -63,7 +68,7 @@ colorItemsArr.forEach((i) => {
     var itemName = "colorItem" + i;
     var itemName = document.createElement("input");
     itemName.setAttribute("id", "colorItem" + i);
-    itemName.setAttribute("type", "color"); 
+    itemName.setAttribute("type", "color");
     let colorContainer = document.getElementById("colorContainer");
     colorContainer.appendChild(itemName);
   }
@@ -88,7 +93,7 @@ document
   .getElementById("colorItem4")
   ?.addEventListener("click", changePenColor.bind(event, "red"));
 
-  document
+document
   .getElementById("colorItem5")
   ?.addEventListener("input", changePenColor.bind(event));
 
@@ -96,31 +101,58 @@ var penContainer = document.createElement("div");
 penContainer.setAttribute("id", "penContainer");
 navManu.appendChild(penContainer);
 
-  colorItemsArr.forEach((i)=>{
+colorItemsArr.forEach((i) => {
+  if (i < 5) {
     var itemName = "penItem" + i;
     var itemName = document.createElement("div");
     itemName.setAttribute("id", "penItem" + i);
     let penContainer = document.getElementById("penContainer");
     penContainer.appendChild(itemName);
-  });
+  }
+});
 
-  document
+document
   .getElementById("penItem0")
   ?.addEventListener("click", changePenSize.bind(event, 3));
 
-  
-  document
+document
   .getElementById("penItem1")
   ?.addEventListener("click", changePenSize.bind(event, 6));
 
-
-  
-  document
+document
   .getElementById("penItem2")
   ?.addEventListener("click", changePenSize.bind(event, 8));
 
-
-  
-  document
+document
   .getElementById("penItem3")
   ?.addEventListener("click", changePenSize.bind(event, 14));
+
+var bgContainer = document.createElement("div");
+bgContainer.setAttribute("id", "bgContainer");
+navManu.appendChild(bgContainer);
+
+colorItemsArr.forEach((i) => {
+    if (i < 4) {
+      var itemName = "bgItem" + i;
+      var itemName = document.createElement("div");
+      itemName.setAttribute("id", "bgItem" + i);
+      let bgContainer = document.getElementById("bgContainer");
+      bgContainer.appendChild(itemName);
+    }
+  });
+
+  document
+  .getElementById("bgItem0")
+  ?.addEventListener("click", changeBoardBg.bind(event, "rgb(29, 27, 27)"));
+
+  document
+  .getElementById("bgItem1")
+  ?.addEventListener("click", changeBoardBg.bind(event, "white"));
+
+  document
+  .getElementById("bgItem2")
+  ?.addEventListener("click", changeBoardBg.bind(event, "rgba(11, 139, 224, 0.294)"));
+
+  document
+  .getElementById("bgItem3")
+  ?.addEventListener("click", changeBoardBg.bind(event, "none"));
