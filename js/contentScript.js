@@ -48,6 +48,11 @@ function clearScreen(){
   ctx.beginPath();
 }
 
+function hideBoard(){
+  canvas.style.display="none";
+  document.getElementById("navManu").style.display="none";
+}
+
 canvas.addEventListener("mousedown", startPosition);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", finishPosition);
@@ -174,7 +179,7 @@ colorItemsArr.forEach((i) => {
     let buttonContainer = document.getElementById("buttonContainer");
     buttonContainer.appendChild(itemName);
     if(i==0) itemName.innerText="Clear All";
-    if(i==1) itemName.innerText="Exit";
+    if(i==1) itemName.innerText="Hide";
   }
 });
 
@@ -183,3 +188,7 @@ colorItemsArr.forEach((i) => {
 document
 .getElementById("buttonItem0")
 ?.addEventListener("click", clearScreen);
+
+document
+.getElementById("buttonItem1")
+?.addEventListener("click", hideBoard);
