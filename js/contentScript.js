@@ -43,6 +43,11 @@ function changeBoardBg ( color = "black"){
     canvas.style.backgroundColor=color;
 }
 
+function clearScreen(){
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.beginPath();
+}
+
 canvas.addEventListener("mousedown", startPosition);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", finishPosition);
@@ -172,3 +177,9 @@ colorItemsArr.forEach((i) => {
     if(i==1) itemName.innerText="Exit";
   }
 });
+
+
+
+document
+.getElementById("buttonItem0")
+?.addEventListener("click", clearScreen);

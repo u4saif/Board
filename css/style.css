@@ -13,10 +13,10 @@
 #navManu {
   position: fixed;
   width: 100px;
-  height: 325px;
+  height: 330px;
   top: 5em;
-  right: -4px;
-  /* right: -77px; */
+  /* right: -4px; */
+  right: -77px;
   z-index: 99999990;
   background: #c9d6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -35,10 +35,10 @@ div#colorContainer {
   grid-template-columns: 40px 40px;
   height: 40px;
 }
-/* #navManu:hover {
-  right: 0px;
+#navManu:hover {
+  right: -4px;
   transition: 90ms ease-in;
-} */
+}
 div#colorItem0,
 div#colorItem1,
 div#colorItem2,
@@ -192,7 +192,6 @@ div#buttonContainer {
 
 #buttonItem1 {
   content: "EXIT";
-  padding: 2px;
   border-radius: 4px;
   background-color: red;
   color: white;
