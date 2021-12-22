@@ -12,8 +12,8 @@
 }
 #navManu {
   position: fixed;
-  width: 7em;
-  height: 300px;
+  width: 100px;
+  height: 325px;
   top: 5em;
   right: -4px;
   /* right: -77px; */
@@ -32,7 +32,7 @@
 div#colorContainer {
   display: grid;
   /* grid: 1fr 1fr; */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40px 40px;
   height: 40px;
 }
 /* #navManu:hover {
@@ -145,28 +145,55 @@ div#bgContainer {
 div#bgItem0,
 div#bgItem1,
 div#bgItem2,
-div#bgItem3
-{
-  width: 25px; 
+div#bgItem3 {
+  width: 25px;
   height: 25px;
   margin-top: 5px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-div#bgItem0{
+div#bgItem0 {
   background-color: rgb(29, 27, 27);
 }
 
-div#bgItem1{
+div#bgItem1 {
   background-color: white;
 }
 
-div#bgItem2{
+div#bgItem2 {
   background-color: rgba(6, 91, 145, 0.76);
 }
 
-div#bgItem3{
+div#bgItem3 {
   background-color: rgba(6, 92, 145, 0);
   border: 2px dashed black;
+}
+
+div#buttonContainer {
+  display: grid;
+  /* grid: 1fr 1fr; */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 4px;
+  height: 40px;
+  width: 76px;
+  padding: 2px;
+  margin-top: 2em;
+  margin-left: 16px;
+}
+
+#buttonItem0 {
+  border-radius: 4px;
+  padding: 2px;
+  background-color: #e2e2e2;
+}
+
+
+#buttonItem1 {
+  content: "EXIT";
+  padding: 2px;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
 }

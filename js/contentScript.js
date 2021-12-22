@@ -156,3 +156,19 @@ colorItemsArr.forEach((i) => {
   document
   .getElementById("bgItem3")
   ?.addEventListener("click", changeBoardBg.bind(event, "none"));
+  
+var buttonContainer = document.createElement("div");
+buttonContainer.setAttribute("id", "buttonContainer");
+navManu.appendChild(buttonContainer);
+
+colorItemsArr.forEach((i) => {
+  if (i < 2) {
+    var itemName = "buttonItem" + i;
+    var itemName = document.createElement("button");
+    itemName.setAttribute("id", "buttonItem" + i);
+    let buttonContainer = document.getElementById("buttonContainer");
+    buttonContainer.appendChild(itemName);
+    if(i==0) itemName.innerText="Clear All";
+    if(i==1) itemName.innerText="Exit";
+  }
+});
