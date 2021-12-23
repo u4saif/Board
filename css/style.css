@@ -2,21 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: cursive;
 }
 #canvas {
   position: fixed;
   top: 0px;
   left: 0px;
   z-index: 9999999;
-  background-color: rgb(29, 27, 27);
+  background-color: rgba(29, 27, 27, 0.2);
 }
+
 #navManu {
   position: fixed;
   width: 100px;
   height: 330px;
   top: 5em;
-  /* right: -4px; */
-  right: -77px;
+  right: -4px;
   z-index: 99999990;
   background: #c9d6ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -25,20 +26,18 @@
     #e2e2e2
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #97aae9, #e2e2e2);
-  border-bottom-left-radius: 2.2em;
-  border-top-left-radius: 2.2em;
+  border-bottom-left-radius: 2em;
+  border-top-left-radius: 2em;
+  box-shadow: 1px 2px 6px 2px rgb(0 0 0 / 18%);
 }
 
 div#colorContainer {
   display: grid;
-  /* grid: 1fr 1fr; */
+
   grid-template-columns: 40px 40px;
   height: 40px;
 }
-#navManu:hover {
-  right: -4px;
-  transition: 90ms ease-in;
-}
+
 div#colorItem0,
 div#colorItem1,
 div#colorItem2,
@@ -186,9 +185,9 @@ div#buttonContainer {
 #buttonItem0 {
   border-radius: 4px;
   padding: 2px;
-  background-color: #e2e2e2;
+  background-color: yellow;
+  box-shadow: 2px 0px 6px 2px rgb(0 0 0 / 18%);
 }
-
 
 #buttonItem1 {
   content: "EXIT";

@@ -3,8 +3,8 @@
   "version": "0.12.21",
   "description": "Smart board that can be use for online classes",
   "action": {
-    "default_icon": "assets/images/icon.png",
-    "default_popup": "index.html"
+    "default_icon": "assets/images/icon.png"
+ 
   },
   "icons": {
     "16": "assets/images/icon16.png",
