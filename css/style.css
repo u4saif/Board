@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: cursive;
 }
 #canvas {
   position: fixed;
@@ -186,6 +185,7 @@ div#buttonContainer {
   border-radius: 4px;
   padding: 2px;
   background-color: yellow;
+  font-family: cursive;
   box-shadow: 2px 0px 6px 2px rgb(0 0 0 / 18%);
 }
 
@@ -193,5 +193,6 @@ div#buttonContainer {
   content: "EXIT";
   border-radius: 4px;
   background-color: red;
+  font-family: cursive;
   color: white;
 }
